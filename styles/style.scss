@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "reset";
+@use "media-queries" as *;
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+
+  padding-inline: 1.5rem;
+  padding-block: 5.5rem;
+  //background-color: var(--clr-primary-main-background);
+  font-family: var(--ff-primary), sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
