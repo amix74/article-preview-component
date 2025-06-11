@@ -8,10 +8,153 @@ body {
   place-content: center;
 
   padding-inline: 1.5rem;
-  padding-block: 5.5rem;
-  //background-color: var(--clr-primary-main-background);
+  padding-block: 4rem;
+  background-color: var(--clr-grey-200);
   font-family: var(--ff-primary), sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.001rem;
+  color: var(--clr-grey-500)
 }
+
+.article-container {
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 40px 40px -10px rgba(201, 213, 225, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 25rem;
+
+  @include mq(medium) {
+    max-width: 38rem;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  @include mq(large) {
+    max-width: 45.625rem;
+  }
+}
+
+.image {
+  overflow: hidden;
+
+  @include mq(medium) {
+    max-width: 229px;
+  }
+
+  @include mq(large) {
+    max-width: 285px;
+  }
+}
+
+
+.article-image {
+  object-fit: cover;
+  height: 200px;
+  object-position: left 0 top 25%;
+  width: 100%;
+
+  @include mq(medium) {
+    object-fit: fill;
+    height: 100%;
+    transform: scaleX(1.23);
+    transform-origin: left;
+  }
+}
+
+
+.content {
+  padding-inline: 1.875rem;
+  padding-block-end: 1.125rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include mq(medium) {
+    max-width: 379px;
+    padding-inline-start: 2rem;
+    padding-inline-end: 2.25rem;
+    padding-block: 41px;
+  }
+
+  @include mq(large) {
+    max-width: 27.8125rem;
+    padding-inline: 2.5rem;
+    padding-block: 1.875rem;
+    margin-inline-start: 0;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.015625rem;
+  color: var(--clr-grey-900);
+}
+
+.text-content {
+}
+
+.article-footer {
+  margin-block-start: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  @include mq(medium) {
+    margin-block-start: 0;
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: 700;
+  color: var(--clr-grey-900);
+}
+
+.date {
+  color: var(--clr-grey-400);
+}
+
+.share-btn {
+  width: 32px;
+  height: 32px;
+
+  background-color: var(--clr-grey-200);
+  border-radius: 100%;
+  border: none;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(medium) {
+    margin-inline-end: 0.3125rem;
+  }
+
+  @include mq(large) {
+    margin-inline-end: 0.1875rem;
+  }
+}
+
 
