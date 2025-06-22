@@ -1,12 +1,38 @@
-const shareBtn = document.querySelectorAll('.share-btn');
+const showBtn = document.querySelector('.share-toast-show-btn');
+const closeBtn = document.querySelector('.share-toast-close-btn');
 const shareToast = document.querySelector('.share-toast');
 
-function toggleShareToast() {
-  console.log('clicked');
+function toggleShareToast(e) {
   shareToast.classList.toggle('hidden');
+
+  if (!shareToast.classList.contains('hidden')) {
+    document.addEventListener('keydown', hiddenShareToast);
+    document.body.addEventListener('click', hiddenShareToast);
+  } else {
+    document.removeEventListener('keydown', hiddenShareToast);
+    document.body.removeEventListener('click', hiddenShareToast);
+  }
+
 }
 
-shareBtn.forEach(btn => {
-  btn.addEventListener('click', toggleShareToast)
-})
+function hiddenShareToast(e) {
+  if (e.key === 'Escape') {
+    toggleShareToast();
+  }
+
+  if (!shareToast.contains(e.target) && !showBtn.contains(e.target)) {
+    toggleShareToast();
+  }
+}
+
+showBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleShareToast();
+});
+
+closeBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleShareToast();
+});
+
 
