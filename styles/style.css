@@ -3,14 +3,14 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/manrope-500.woff2") format("woff2");
+  src: url("../fonts/manrope-500.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/manrope-700.woff2") format("woff2");
+  src: url("../fonts/manrope-700.woff2") format("woff2");
 }
 :root {
   --clr-grey-900: hsl(217, 19%, 35%);
