@@ -155,13 +155,16 @@ body {
 
   cursor: pointer;
 
-  &:hover {
+  &:hover, &:focus-visible {
     background-color: var(--clr-grey-500);
+    outline: none;
   }
 
-  &:hover .share-icon path {
+
+  &:hover .share-icon path, &:focus-visible .share-icon path {
     fill: var(--clr-white);
   }
+
 
   @include mq(medium) {
     margin-inline-end: 0.3125rem;
@@ -169,6 +172,14 @@ body {
 
   @include mq(large) {
     margin-inline-end: 0.1875rem;
+  }
+}
+
+.share-btn-focus {
+  background-color: var(--clr-grey-500);
+
+  & path {
+    fill: var(--clr-white);
   }
 }
 
@@ -199,6 +210,7 @@ body {
   .share-btn {
     background-color: var(--clr-grey-500);
     flex-shrink: 0;
+    outline: none;
 
     @include mq(medium) {
       display: none;
@@ -253,6 +265,7 @@ body {
 
 .social-icon {
   transition: 0.2s ease-in-out;
+
   &:hover {
     scale: 1.2;
     transition: 0.2s ease-in-out;

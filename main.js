@@ -4,6 +4,7 @@ const shareToast = document.querySelector('.share-toast');
 
 function toggleShareToast(e) {
   shareToast.classList.toggle('hidden');
+  showBtn.classList.toggle('share-btn-focus')
 
   if (!shareToast.classList.contains('hidden')) {
     document.addEventListener('keydown', hiddenShareToast);

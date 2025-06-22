@@ -230,10 +230,11 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.share-btn:hover {
+.share-btn:hover, .share-btn:focus-visible {
   background-color: var(--clr-grey-500);
+  outline: none;
 }
-.share-btn:hover .share-icon path {
+.share-btn:hover .share-icon path, .share-btn:focus-visible .share-icon path {
   fill: var(--clr-white);
 }
 @media (min-width: 50rem) {
@@ -245,6 +246,13 @@ body {
   .share-btn {
     margin-inline-end: 0.1875rem;
   }
+}
+
+.share-btn-focus {
+  background-color: var(--clr-grey-500);
+}
+.share-btn-focus path {
+  fill: var(--clr-white);
 }
 
 .share-toast {
@@ -270,6 +278,7 @@ body {
 .share-toast .share-btn {
   background-color: var(--clr-grey-500);
   flex-shrink: 0;
+  outline: none;
 }
 @media (min-width: 50rem) {
   .share-toast .share-btn {
