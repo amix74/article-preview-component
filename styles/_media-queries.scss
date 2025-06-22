@@ -7,8 +7,9 @@ $breakpoints: (
 );
 
 @mixin mq($key) {
-  $size: map-get($breakpoints, $key);
-  @media (min-width: $size) {
+  $screen-size: map-get($breakpoints, $key);
+  @media (min-width: $screen-size) {
     @content;
+
   }
 }

@@ -71,13 +71,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
-/*
-  10. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
-
 ul {
   list-style: none;
 }
@@ -92,7 +85,7 @@ body {
   padding-block: 4rem;
   background-color: var(--clr-grey-200);
   font-family: var(--ff-primary), sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.001rem;

@@ -13,7 +13,7 @@ body {
   padding-block: 4rem;
   background-color: var(--clr-grey-200);
   font-family: var(--ff-primary), sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.001rem;
@@ -101,9 +101,6 @@ body {
   line-height: 130%;
   letter-spacing: 0.015625rem;
   color: var(--clr-grey-900);
-}
-
-.text-content {
 }
 
 .article-footer {
