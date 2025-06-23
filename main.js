@@ -2,7 +2,7 @@ const showBtn = document.querySelector('.share-toast-show-btn');
 const closeBtn = document.querySelector('.share-toast-close-btn');
 const shareToast = document.querySelector('.share-toast');
 
-function toggleShareToast(e) {
+function toggleShareToast() {
   shareToast.classList.toggle('hidden');
   showBtn.classList.toggle('share-btn-focus')
 

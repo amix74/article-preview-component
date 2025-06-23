@@ -141,6 +141,7 @@ body {
   height: 2rem;
 
   background-color: var(--clr-grey-200);
+  color: var(--clr-grey-500);
   border-radius: 100%;
   border: none;
 
@@ -158,8 +159,8 @@ body {
   }
 
 
-  &:hover .share-icon path, &:focus-visible .share-icon path {
-    fill: var(--clr-white);
+  &:hover .share-icon, &:focus-visible .share-icon {
+    color: var(--clr-white);
   }
 
 
@@ -174,11 +175,8 @@ body {
 
 .share-btn-focus {
   background-color: var(--clr-grey-500);
-
-  & path {
-    fill: var(--clr-white);
+  color: var(--clr-white);
   }
-}
 
 .share-toast {
   background-color: var(--clr-grey-900);
@@ -206,16 +204,13 @@ body {
 
   .share-btn {
     background-color: var(--clr-grey-500);
+    color: var(--clr-white);
     flex-shrink: 0;
     outline: none;
 
     @include mq(medium) {
       display: none;
     }
-  }
-
-  .share-icon path {
-    fill: var(--clr-white);
   }
 
   @include mq(medium) {

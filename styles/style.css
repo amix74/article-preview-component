@@ -215,6 +215,7 @@ body {
   width: 2rem;
   height: 2rem;
   background-color: var(--clr-grey-200);
+  color: var(--clr-grey-500);
   border-radius: 100%;
   border: none;
   flex-shrink: 0;
@@ -227,8 +228,8 @@ body {
   background-color: var(--clr-grey-500);
   outline: none;
 }
-.share-btn:hover .share-icon path, .share-btn:focus-visible .share-icon path {
-  fill: var(--clr-white);
+.share-btn:hover .share-icon, .share-btn:focus-visible .share-icon {
+  color: var(--clr-white);
 }
 @media (min-width: 50rem) {
   .share-btn {
@@ -243,9 +244,7 @@ body {
 
 .share-btn-focus {
   background-color: var(--clr-grey-500);
-}
-.share-btn-focus path {
-  fill: var(--clr-white);
+  color: var(--clr-white);
 }
 
 .share-toast {
@@ -270,6 +269,7 @@ body {
 }
 .share-toast .share-btn {
   background-color: var(--clr-grey-500);
+  color: var(--clr-white);
   flex-shrink: 0;
   outline: none;
 }
@@ -277,9 +277,6 @@ body {
   .share-toast .share-btn {
     display: none;
   }
-}
-.share-toast .share-icon path {
-  fill: var(--clr-white);
 }
 @media (min-width: 50rem) {
   .share-toast {
